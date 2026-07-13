@@ -13,7 +13,7 @@ Identity confirmed.
 <div align="center">
 
 [![Live Platform](https://img.shields.io/badge/LIVE-wraithwall.online-CC0000?style=flat-square&logo=statuspage&logoColor=white)](https://wraithwall.online)
-[![OSS Toolkit](https://img.shields.io/badge/OSS-MIT-2D7A3E?style=flat-square&logo=opensourceinitiative&logoColor=white)](https://github.com/niffyhunt/wraithwall-toolkit)
+[![OSS Toolkit](https://img.shields.io/badge/OSS-MIT-2D7A3E?style=flat-square&logo=opensourceinitiative&logoColor=white)](https://github.com/niffyhunt/wraithwall)
 [![Honeypot](https://img.shields.io/badge/HONEYPOT-ARMED-CC0000?style=flat-square&logo=honey)](#)
 [![Telemetry](https://img.shields.io/badge/TELEMETRY-ONLINE-CC0000?style=flat-square)](#)
 [![Canaries](https://img.shields.io/badge/CANARIES-ARMED-CC8400?style=flat-square)](#)
@@ -41,12 +41,12 @@ A Flask monolith serving public threat tools, an authenticated SOC console, and 
 
 Attacker sessions flow through the platform in real time: Cowrie SSH/Telnet logs feed Redis, the correlator links sessions across IPs using HASSH fingerprints and credential reuse, and the MITRE mapper classifies commands into ATT&CK techniques. Everything is cross-referenced against the canary network and BGP route anomalies.
 
-[Repo](https://github.com/niffyhunt/wraithwall) · [Incident report: Outlaw/mdrfckr worm cluster](https://github.com/niffyhunt/wraithwall/blob/main/incidents/2026-05-31-outlaw-mdrfckr.md) · [Live platform](https://wraithwall.online) · [OSS toolkit](https://github.com/niffyhunt/wraithwall-toolkit)
+[Repo](https://github.com/niffyhunt/wraithwall) · [Incident report: Outlaw/mdrfckr worm cluster](https://github.com/niffyhunt/wraithwall/blob/main/incidents/2026-05-31-outlaw-mdrfckr.md) · [Live platform](https://wraithwall.online) · [OSS toolkit](https://github.com/niffyhunt/wraithwall)
 
 </details>
 
 <details>
-<summary><b>WraithWall Toolkit</b> · Three pip-installable MIT packages extracted from the platform — deception tooling for anyone</summary>
+<summary><b>WraithWall OSS</b> · Four pip-installable MIT packages extracted from the platform — deception tooling for anyone</summary>
 <br>
 
 | Package | What it does |
@@ -54,10 +54,11 @@ Attacker sessions flow through the platform in real time: Cowrie SSH/Telnet logs
 | `canary-kit` | Mint and detect supply-chain canary tokens |
 | `honeypot-mitre` | Cowrie logs → MITRE ATT&CK techniques with deterministic scoring |
 | `dml-spec` | HMAC-signed, versioned Deception Markup Language |
+| `ravenscan` | Engineering intelligence CLI and library — codebase auditing |
 
 Each is independent. None depends on the platform. All ship with a CLI and test suite.
 
-[Repo](https://github.com/niffyhunt/wraithwall-toolkit)
+[Repo](https://github.com/niffyhunt/wraithwall)
 
 </details>
 
@@ -87,7 +88,7 @@ ROLE:    Codebase intelligence
 
 Started as internal tooling for WraithWall's own monorepo audits. Now a standalone CLI and library. Learns a project over time, correlates changes across revisions, and explains why changes matter — not just what changed.
 
-[Source](https://github.com/niffyhunt/wraithwall/tree/main/ravenscan)
+[Source](https://github.com/niffyhunt/wraithwall/tree/main/packages/ravenscan)
 
 </details>
 
@@ -134,7 +135,7 @@ graph TB
     PLATFORM --> CONSOLE[SOC Console]
     PLATFORM --> DECEPTION[Deception Systems]
 
-    PLATFORM --> OSS[WraithWall Toolkit<br/>canary-kit · honeypot-mitre<br/>dml-spec]
+    PLATFORM --> OSS[WraithWall OSS<br/>canary-kit · honeypot-mitre<br/>dml-spec · ravenscan]
 
     style COWRIE fill:#1a0000,stroke:#cc0000,color:#cccccc
     style PLATFORM fill:#0a0a0a,stroke:#cc0000,color:#cccccc
@@ -324,9 +325,9 @@ Valuable contributions:
 
 [![Website](https://img.shields.io/badge/wraithwall.online-CC0000?style=flat-square)](https://wraithwall.online)
 [![Blog](https://img.shields.io/badge/Blog-444444?style=flat-square)](https://wraithwall.online/blog)
-[![X](https://img.shields.io/badge/@niffy__hunt-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/niffy_hunt)
+[![X](https://img.shields.io/badge/@Niffy__hunt-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/Niffy_hunt)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adewale-babalola-b85795395?utm_source=share_via&utm_content=profile&utm_medium=member_ios)
-[![Email](https://img.shields.io/badge/Email-333333?style=flat-square&logo=gmail&logoColor=white)](mailto:ezmcyber@zohomail.com)
+[![Email](https://img.shields.io/badge/Email-333333?style=flat-square&logo=gmail&logoColor=white)](mailto:admin@wraithwall.online)
 
 <br>
 
