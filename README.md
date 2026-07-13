@@ -325,7 +325,7 @@ Valuable contributions:
 [![Website](https://img.shields.io/badge/wraithwall.online-CC0000?style=flat-square)](https://wraithwall.online)
 [![Blog](https://img.shields.io/badge/Blog-444444?style=flat-square)](https://wraithwall.online/blog)
 [![X](https://img.shields.io/badge/@niffy__hunt-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/niffy_hunt)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/babalola-adewale-b85795395)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adewale-babalola-b85795395?utm_source=share_via&utm_content=profile&utm_medium=member_ios)
 [![Email](https://img.shields.io/badge/Email-333333?style=flat-square&logo=gmail&logoColor=white)](mailto:ezmcyber@zohomail.com)
 
 <br>
