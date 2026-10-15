@@ -238,9 +238,7 @@ Field notes from running the platform — **[Technical Blog →](https://wraithw
 
 ## ⊳ COLLABORATE
 
-If you run a honeypot, build detection tooling, or found something broken: open an issue or a PR on [wraithwall](https://github.com/niffyhunt/wraithwall) (its `CONTRIBUTING.md` and `SECURITY.md` say how), or report vulnerabilities through my [HackerOne profile](https://hackerone.com/niffy_hunt).
-
-[![Report a vulnerability](https://img.shields.io/badge/Report_a_vulnerability-444444?style=flat-square&logo=hackerone&logoColor=white)](https://hackerone.com/niffy_hunt)
+If you run a honeypot, build detection tooling, or found something broken: open an issue or a PR on [wraithwall](https://github.com/niffyhunt/wraithwall) (its `CONTRIBUTING.md` and `SECURITY.md` say how). For a security issue, follow [wraithwall's SECURITY.md](https://github.com/niffyhunt/wraithwall/blob/main/SECURITY.md) or email [contact@wraithwall.online](mailto:contact@wraithwall.online) (subject: `Security disclosure`).
 
 ```text
 especially useful:
