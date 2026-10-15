@@ -1,12 +1,18 @@
 <div align="center">
 
+<img src="./assets/profile-hero.svg" alt="Illustration: route map of the WraithWall pipeline — collect, score, respond">
+
 # Adewale Babalola
 
 ### Niffy Hunt · Lagos, Nigeria
 
 **I build tools, and most of them end up in security.**
 
-[![Live Platform](https://img.shields.io/badge/LIVE-wraithwall.online-CC0000?style=flat-square&logo=statuspage&logoColor=white)](https://wraithwall.online)
+[![Open live platform](https://img.shields.io/badge/Open_live_platform-CC0000?style=flat-square)](https://wraithwall.online)
+[![Explore the source](https://img.shields.io/badge/Explore_the_source-181818?style=flat-square&logo=github&logoColor=white)](https://github.com/niffyhunt/wraithwall)
+
+<br>
+
 [![OSS Toolkit](https://img.shields.io/badge/OSS-MIT-2D7A3E?style=flat-square&logo=opensourceinitiative&logoColor=white)](https://github.com/niffyhunt/wraithwall)
 [![PyPI wraithwall](https://img.shields.io/pypi/v/wraithwall?style=flat-square)](https://pypi.org/project/wraithwall/)
 [![PyPI restverify](https://img.shields.io/pypi/v/restverify?style=flat-square)](https://pypi.org/project/restverify/)
@@ -52,6 +58,10 @@ LIVE:    wraithwall.online
 
 A Flask platform you self-host. Cowrie SSH/Telnet honeypots and web decoys capture hostile sessions; behavioural fingerprinting, campaign correlation and deterministic MITRE ATT&CK scoring turn them into intelligence; canary tokens, an active-defense gateway and incident playbooks turn intelligence into response. PostgreSQL for records, Redis for live state, SSE streams for the console — no SaaS dependency, nothing leaves your host.
 
+[![Open live platform](https://img.shields.io/badge/Open_live_platform-CC0000?style=flat-square)](https://wraithwall.online)
+[![Repository](https://img.shields.io/badge/Repository-444444?style=flat-square&logo=github&logoColor=white)](https://github.com/niffyhunt/wraithwall)
+[![Read the docs](https://img.shields.io/badge/Read_the_docs-444444?style=flat-square)](https://wraithwall.online/docs)
+
 - [Repository](https://github.com/niffyhunt/wraithwall) · [Live platform](https://wraithwall.online) · [Docs](https://wraithwall.online/docs) · `pip install wraithwall`
 
 </details>
@@ -71,6 +81,8 @@ Five packages, each with its own CLI, tests and README. None imports Flask, a da
 | `wraithmesh` | Distributed sensor mesh with signed observations | [0.2.0](https://pypi.org/project/wraithmesh/) |
 | `ravenscan` | Engineering-intelligence CLI (`raven`) for codebase audits | [0.2.1](https://pypi.org/project/ravenscan/) |
 
+[![View toolkit](https://img.shields.io/badge/View_toolkit-2D7A3E?style=flat-square)](https://github.com/niffyhunt/wraithwall-toolkit)
+
 [Toolkit repository](https://github.com/niffyhunt/wraithwall-toolkit) · [RavenScan source](https://github.com/niffyhunt/wraithwall/tree/main/packages/ravenscan)
 
 </details>
@@ -86,6 +98,8 @@ SOURCE:  github.com/niffyhunt/restverify
 
 `restic check` validates the repository; restverify validates the *restore*. It restores a snapshot into a private temp directory, compares it against the source tree, and returns exit codes a shell or CI can act on — `0` verified, `2` differs, `1` failed. Read-only on the repository by construction, `--json` on every command, local history and a read-only dashboard.
 
+[![Repository](https://img.shields.io/badge/Repository-444444?style=flat-square&logo=github&logoColor=white)](https://github.com/niffyhunt/restverify)
+
 - [Repository](https://github.com/niffyhunt/restverify) · `pip install restverify`
 
 </details>
@@ -100,6 +114,8 @@ SOURCE:  github.com/niffyhunt/BGP-monitor
 ```
 
 Watches the global routing table for your prefixes over RIPE RIS Live, optionally cross-checked against Cloudflare Radar. Learns a baseline per prefix and alerts within seconds on origin-AS changes, unauthorised announcements and path anomalies — no BGP session of your own, no commercial feed. Drops into any Flask app as a blueprint; the same engine runs inside WraithWall.
+
+[![Repository](https://img.shields.io/badge/Repository-444444?style=flat-square&logo=github&logoColor=white)](https://github.com/niffyhunt/BGP-monitor)
 
 - [Repository](https://github.com/niffyhunt/BGP-monitor)
 
@@ -193,19 +209,6 @@ WraithWall, the toolkit, BGP-monitor and `ravenscan` are MIT; the remaining proj
 
 ---
 
-## ⊳ WRITING
-
-Field notes from running the platform — **[Technical Blog →](https://wraithwall.online/blog)**
-
-- [72 Hours, 3 Botnets: DeFi Validator Sprayer, Tencent Scanner, and X-UI Hunter Caught Live](https://wraithwall.online/blog/72-hours-of-ssh-attacks-3-botnets-exposed)
-- [HUNTER-RECON: Dissecting an Automated Botnet Scanner Caught in Production](https://wraithwall.online/blog/hunter-recon-botnet-scanner-analysis)
-- [Cowrie to Campaigns: The Production Intelligence Pipeline](https://wraithwall.online/blog/cowrie-pipeline-campaign-intelligence)
-- [Two IPs, One SSH Key: Linking an Operator Across Networks](https://wraithwall.online/blog/two-ips-one-ssh-key)
-- [Eighteen Months Running a Deception Platform Solo: What the Audit Found](https://wraithwall.online/blog/solo-deception-platform-audit)
-- [I Open-Sourced My Deception Toolkit, BGP Hijack Monitor Included](https://wraithwall.online/blog/open-sourcing-the-wraithwall-toolkit)
-
----
-
 ## ⊳ CURRENTLY
 
 ```text
@@ -218,9 +221,26 @@ Plus whatever the honeypots teach me next — write-ups land on the blog.
 
 ---
 
+## ⊳ WRITING
+
+Field notes from running the platform — **[Technical Blog →](https://wraithwall.online/blog)**
+
+[![Read the field notes](https://img.shields.io/badge/Read_the_field_notes-444444?style=flat-square)](https://wraithwall.online/blog)
+
+- [72 Hours, 3 Botnets: DeFi Validator Sprayer, Tencent Scanner, and X-UI Hunter Caught Live](https://wraithwall.online/blog/72-hours-of-ssh-attacks-3-botnets-exposed)
+- [HUNTER-RECON: Dissecting an Automated Botnet Scanner Caught in Production](https://wraithwall.online/blog/hunter-recon-botnet-scanner-analysis)
+- [Cowrie to Campaigns: The Production Intelligence Pipeline](https://wraithwall.online/blog/cowrie-pipeline-campaign-intelligence)
+- [Two IPs, One SSH Key: Linking an Operator Across Networks](https://wraithwall.online/blog/two-ips-one-ssh-key)
+- [Eighteen Months Running a Deception Platform Solo: What the Audit Found](https://wraithwall.online/blog/solo-deception-platform-audit)
+- [I Open-Sourced My Deception Toolkit, BGP Hijack Monitor Included](https://wraithwall.online/blog/open-sourcing-the-wraithwall-toolkit)
+
+---
+
 ## ⊳ COLLABORATE
 
 If you run a honeypot, build detection tooling, or found something broken: open an issue or a PR on [wraithwall](https://github.com/niffyhunt/wraithwall) (its `CONTRIBUTING.md` and `SECURITY.md` say how), or report vulnerabilities through my [HackerOne profile](https://hackerone.com/niffy_hunt).
+
+[![Report a vulnerability](https://img.shields.io/badge/Report_a_vulnerability-444444?style=flat-square&logo=hackerone&logoColor=white)](https://hackerone.com/niffy_hunt)
 
 ```text
 especially useful:
