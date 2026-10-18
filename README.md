@@ -1,231 +1,121 @@
 <div align="center">
 
-<img src="./assets/profile-hero.svg" alt="Illustration: route map of the WraithWall pipeline — collect, score, respond">
+<img src="./assets/profile-hero-v2.svg" alt="Dimensional systems map showing hostile signals entering a workshop, becoming evidence, and leaving as WraithWall, restverify, and open-source tools.">
 
 # Adewale Babalola
 
 ### Niffy Hunt · Lagos, Nigeria
 
-**I build tools, and most of them end up in security.**
+**I build the tools I wish existed. Most of them find their way into security.**
 
-[![Open live platform](https://img.shields.io/badge/Open_live_platform-CC0000?style=flat-square)](https://wraithwall.online)
-[![Explore the source](https://img.shields.io/badge/Explore_the_source-181818?style=flat-square&logo=github&logoColor=white)](https://github.com/niffyhunt/wraithwall)
-
-<br>
-
-[![OSS Toolkit](https://img.shields.io/badge/OSS-MIT-2D7A3E?style=flat-square&logo=opensourceinitiative&logoColor=white)](https://github.com/niffyhunt/wraithwall)
-[![PyPI wraithwall](https://img.shields.io/pypi/v/wraithwall?style=flat-square)](https://pypi.org/project/wraithwall/)
-[![PyPI restverify](https://img.shields.io/pypi/v/restverify?style=flat-square)](https://pypi.org/project/restverify/)
+[![Explore WraithWall](https://img.shields.io/badge/Explore_WraithWall-cc0000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/niffyhunt/wraithwall)
+[![Open the platform](https://img.shields.io/badge/Open_the_platform-161b22?style=for-the-badge&logo=googlechrome&logoColor=white)](https://wraithwall.online)
+[![Read the field notes](https://img.shields.io/badge/Read_the_field_notes-2d7a3e?style=for-the-badge&logo=readme&logoColor=white)](https://wraithwall.online/blog)
 
 </div>
 
-```text
- whoami
- ┌───────────────────────────────────────────────────┐
- │ builder · security engineer · system operator     │
- │ WraithWall (deception platform) runs in the open; │
- │ its reusable parts ship as MIT packages;          │
- │ the rest of the shelf exists because I needed it. │
- └───────────────────────────────────────────────────┘
-   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-```
+> I build practical systems for difficult technical problems: deception and threat intelligence, restore verification, route monitoring, self-hosting, developer security, and the open-source tools that grow out of running those systems myself.
 
-I run [WraithWall](https://github.com/niffyhunt/wraithwall) — a deception-and-threat-intelligence platform that takes hostile internet traffic and turns it into scored, correlated intelligence — and I keep extracting the reusable parts as small open-source tools. Around that sit the tools I wished existed: proof that a backup actually restores, a prefix monitor that watches BGP from the outside, a platform that deploys from Git, an editor that flags vulnerabilities while I type.
+<div align="center">
 
----
+`SECURITY` · `INFRASTRUCTURE` · `AUTOMATION` · `OPEN SOURCE`
 
-## ⊳ WHAT I BUILD
+</div>
 
-| Security & deception | Infrastructure & operations | Developer tools |
+## Start here
+
+| **Follow the live work** | **Inspect the tools** | **Read the thinking** |
 |---|---|---|
-| [WraithWall](https://github.com/niffyhunt/wraithwall) — honeypots → intelligence | [BGP-monitor](https://github.com/niffyhunt/BGP-monitor) — hijack detection | [RavenScan](https://github.com/niffyhunt/wraithwall/tree/main/packages/ravenscan) — codebase intelligence |
-| [WraithWall OSS](https://github.com/niffyhunt/wraithwall-toolkit) — MIT deception packages | [restverify](https://github.com/niffyhunt/restverify) — restore verification | [Codeguard Copilot](https://github.com/niffyhunt/Codeguard-copilot) — editor-time scanning |
-| [WraithMesh](https://pypi.org/project/wraithmesh/) — sensor mesh | [My Mini Cloud](https://github.com/niffyhunt/my-mini-cloud) — Git-to-URL PaaS | |
+| [Open WraithWall](https://wraithwall.online) · [read the docs](https://wraithwall.online/docs) | [WraithWall source](https://github.com/niffyhunt/wraithwall) · [OSS toolkit](https://github.com/niffyhunt/wraithwall-toolkit) | [Technical blog](https://wraithwall.online/blog) · [Security policy](https://github.com/niffyhunt/wraithwall/blob/main/SECURITY.md) |
 
----
-
-## ⊳ SELECTED WORK
-
-<details open>
-<summary><b>WraithWall</b> · deception-and-threat-intelligence platform — hostile traffic in, scored intelligence out</summary>
-<br>
-
-```text
-STATUS:  ACTIVE (v0.2.1 on PyPI)    LICENSE:  MIT
-SOURCE:  github.com/niffyhunt/wraithwall
-LIVE:    wraithwall.online
-```
-
-A Flask platform you self-host. Cowrie SSH/Telnet honeypots and web decoys capture hostile sessions; behavioural fingerprinting, campaign correlation and deterministic MITRE ATT&CK scoring turn them into intelligence; canary tokens, an active-defense gateway and incident playbooks turn intelligence into response. PostgreSQL for records, Redis for live state, SSE streams for the console — no SaaS dependency, nothing leaves your host.
-
-[![Open live platform](https://img.shields.io/badge/Open_live_platform-CC0000?style=flat-square)](https://wraithwall.online)
-[![Repository](https://img.shields.io/badge/Repository-444444?style=flat-square&logo=github&logoColor=white)](https://github.com/niffyhunt/wraithwall)
-[![Read the docs](https://img.shields.io/badge/Read_the_docs-444444?style=flat-square)](https://wraithwall.online/docs)
-
-- [Repository](https://github.com/niffyhunt/wraithwall) · [Live platform](https://wraithwall.online) · [Docs](https://wraithwall.online/docs) · `pip install wraithwall`
-
-</details>
-
-
-<details>
-<summary><b>WraithWall OSS</b> · standalone MIT packages extracted from the platform — deception tooling for anyone</summary>
-<br>
-
-Five packages, each with its own CLI, tests and README. None imports Flask, a database, or the platform.
-
-| Package | What it does | PyPI |
-|---|---|---|
-| `canary-kit` | Mint and detect supply-chain canary tokens | [0.1.0](https://pypi.org/project/canary-kit/) |
-| `honeypot-mitre` | Cowrie logs → MITRE ATT&CK techniques + deterministic score | [0.1.0](https://pypi.org/project/honeypot-mitre/) |
-| `dml-spec` | HMAC-signed, versioned deception configuration | [1.1.0](https://pypi.org/project/dml-spec/) |
-| `wraithmesh` | Distributed sensor mesh with signed observations | [0.2.0](https://pypi.org/project/wraithmesh/) |
-| `ravenscan` | Engineering-intelligence CLI (`raven`) for codebase audits | [0.2.1](https://pypi.org/project/ravenscan/) |
-
-[![View toolkit](https://img.shields.io/badge/View_toolkit-2D7A3E?style=flat-square)](https://github.com/niffyhunt/wraithwall-toolkit)
-
-[Toolkit repository](https://github.com/niffyhunt/wraithwall-toolkit) · [RavenScan source](https://github.com/niffyhunt/wraithwall/tree/main/packages/ravenscan)
-
-</details>
-
-<details>
-<summary><b>restverify</b> · prove your backups actually restore — restic restore-verification CLI</summary>
-<br>
-
-```text
-STATUS:  RELEASED (v0.3.1 on PyPI)   DEPENDENCIES:  none
-SOURCE:  github.com/niffyhunt/restverify
-```
-
-`restic check` validates the repository; restverify validates the *restore*. It restores a snapshot into a private temp directory, compares it against the source tree, and returns exit codes a shell or CI can act on — `0` verified, `2` differs, `1` failed. Read-only on the repository by construction, `--json` on every command, local history and a read-only dashboard.
-
-[![Repository](https://img.shields.io/badge/Repository-444444?style=flat-square&logo=github&logoColor=white)](https://github.com/niffyhunt/restverify)
-
-- [Repository](https://github.com/niffyhunt/restverify) · `pip install restverify`
-
-</details>
-
-<details>
-<summary><b>BGP Monitor</b> · real-time route-anomaly detection, watched from the outside</summary>
-<br>
-
-```text
-STATUS:  RELEASED    LICENSE:  MIT    SIZE:  ~600 lines
-SOURCE:  github.com/niffyhunt/BGP-monitor
-```
-
-Watches the global routing table for your prefixes over RIPE RIS Live, optionally cross-checked against Cloudflare Radar. Learns a baseline per prefix and alerts within seconds on origin-AS changes, unauthorised announcements and path anomalies — no BGP session of your own, no commercial feed. Drops into any Flask app as a blueprint; the same engine runs inside WraithWall.
-
-[![Repository](https://img.shields.io/badge/Repository-444444?style=flat-square&logo=github&logoColor=white)](https://github.com/niffyhunt/BGP-monitor)
-
-- [Repository](https://github.com/niffyhunt/BGP-monitor)
-
-</details>
-
-<details>
-<summary><b>+ also</b> · editor tooling & self-hosting</summary>
-<br>
-
-**[Codeguard Copilot](https://github.com/niffyhunt/Codeguard-copilot)** — catches vulnerabilities while you type: deterministic multi-language patterns with CWE references, optional AI analysis, VS Code extension source plus a CLI published as [`raven-guard`](https://pypi.org/project/raven-guard/).
-
-**[My Mini Cloud](https://github.com/niffyhunt/my-mini-cloud)** — self-hosted Heroku-like PaaS: Git-to-URL deploys with automatic SSL and Docker isolation.
-
-</details>
-
----
-
-## ⊳ ECOSYSTEM MAP
-
-What connects the work — capture at the edge, score it honestly, hand the operator something to act on; then pull the reusable pieces out and let them stand alone:
-
-```text
- ┌── COLLECT ──────────────────────────────┐
- │  honeypots · web decoys · RIS feed      │
- └─────────────────────┬───────────────────┘
-  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
- ┌── SCORE ────────────────────────────────┐
- │  ATT&CK mapping · campaigns · fingerprints │
- └─────────────────────┬───────────────────┘
-  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
- ┌── RESPOND ──────────────────────────────┐
- │  playbooks · canaries · gateway         │
- └─────────────────────────────────────────┘
-```
+## The work, at a glance
 
 ```mermaid
-graph TB
-    subgraph LIVE["live systems"]
-        HONEY["Cowrie honeypots<br/>& web decoys"]
-        SITE["wraithwall.online<br/>platform in production"]
-    end
-    subgraph INTEL["intelligence"]
-        CORR["campaign correlator<br/>MITRE ATT&CK scoring"]
-        BGP["BGP monitor"]
-    end
-    subgraph PKGS["extracted packages"]
-        KIT["canary-kit · honeypot-mitre<br/>dml-spec · wraithmesh"]
-        RAV["ravenscan"]
-    end
-    subgraph SOLO["built to stand alone"]
-        RV["restverify"]
-        MMC["my-mini-cloud"]
-        CG["codeguard copilot"]
-    end
-    HONEY --> CORR
-    CORR --> SITE
-    BGP --> SITE
-    HONEY -.->|extracted from| KIT
-    HONEY -.->|attacker behaviour informs| CG
-    classDef live fill:#1a0000,stroke:#cc0000,color:#cccccc
-    classDef intel fill:#1a0a00,stroke:#cc8400,color:#cccccc
-    classDef pkg fill:#0a1a0a,stroke:#2d7a3e,color:#cccccc
-    classDef solo fill:#0a0a1a,stroke:#4488cc,color:#cccccc
-    class HONEY,SITE live
-    class CORR,BGP intel
-    class KIT,RAV pkg
-    class RV,MMC,CG solo
+graph LR
+    A[hostile traffic] --> B[WraithWall]
+    B --> C[evidence]
+    C --> D[scoring & campaigns]
+    D --> E[response]
+    C -. reusable parts .-> F[open-source toolkit]
+    F --> G[canary-kit]
+    F --> H[honeypot-mitre]
+    F --> I[dml-spec]
+    F --> J[wraithmesh]
+    K[restverify] --> L[restore proof]
+    M[BGP Monitor] --> N[route anomalies]
+    O[RavenScan] --> P[codebase intelligence]
 ```
 
-Stack: Python 3.10+ · Flask · PostgreSQL · Redis · Docker · Vue 3 · Vite · Tailwind · GitHub Actions — plus Cowrie, MITRE ATT&CK, RIPE RIS Live and Cloudflare Radar.
+<details>
+<summary><b>How to read this map</b></summary>
+<br>
 
+WraithWall is the centre of gravity: a self-hosted deception and threat-intelligence platform. The smaller projects are not a random list. Some are extracted components from that platform; others are independent tools built around problems that should have had better answers.
 
----
+</details>
 
-## ⊳ OPEN SOURCE · RELEASED TOOLS
+## Flagship systems
 
-Everything above is public and installable — the platform itself, five sibling packages, the editor CLI, and the backup verifier:
+### [WraithWall](https://github.com/niffyhunt/wraithwall)
 
-| Package | What it is | PyPI |
+**Deception and threat intelligence for systems you operate yourself.**
+
+Hostile SSH, Telnet, and web activity enters through honeypots and decoys. The platform records sessions, preserves evidence, maps behavior to MITRE ATT&CK techniques, links related activity, and gives an operator something they can investigate and act on.
+
+[![Open the live platform](https://img.shields.io/badge/Open_the_live_platform-cc0000?style=flat-square)](https://wraithwall.online) [![Read the docs](https://img.shields.io/badge/Read_the_docs-444444?style=flat-square)](https://wraithwall.online/docs) [![View the source](https://img.shields.io/badge/View_the_source-181818?style=flat-square&logo=github&logoColor=white)](https://github.com/niffyhunt/wraithwall) [![PyPI](https://img.shields.io/pypi/v/wraithwall?style=flat-square)](https://pypi.org/project/wraithwall/)
+
+### [restverify](https://github.com/niffyhunt/restverify)
+
+**Because a backup is not verified until it restores.**
+
+`restic check` validates the repository. `restverify` validates the restore: it restores a snapshot into a private temporary directory, compares it against the source tree, and returns exit codes that CI can act on. Read-only by construction, JSON on every command, with local history and a read-only dashboard.
+
+[![View the source](https://img.shields.io/badge/View_the_source-181818?style=flat-square&logo=github&logoColor=white)](https://github.com/niffyhunt/restverify) [![PyPI](https://img.shields.io/pypi/v/restverify?style=flat-square)](https://pypi.org/project/restverify/)
+
+## Open-source tools
+
+| Project | Problem it addresses | Entry point |
 |---|---|---|
-| `wraithwall` | The platform as a library + CLI | [0.2.1](https://pypi.org/project/wraithwall/) |
-| `ravenscan` | Codebase intelligence (`raven`) | [0.2.1](https://pypi.org/project/ravenscan/) |
-| `canary-kit` | Supply-chain canary tokens | [0.1.0](https://pypi.org/project/canary-kit/) |
-| `honeypot-mitre` | Cowrie → ATT&CK + deterministic score | [0.1.0](https://pypi.org/project/honeypot-mitre/) |
-| `dml-spec` | HMAC-signed deception configuration | [1.1.0](https://pypi.org/project/dml-spec/) |
-| `wraithmesh` | Distributed sensor mesh | [0.2.0](https://pypi.org/project/wraithmesh/) |
-| `raven-guard` | Security analysis engine (CodeGuard CLI) | [0.5.0](https://pypi.org/project/raven-guard/) |
-| `restverify` | Restore verification for restic | [0.3.1](https://pypi.org/project/restverify/) |
+| [WraithWall Toolkit](https://github.com/niffyhunt/wraithwall-toolkit) | Standalone deception-engineering components | [Explore the toolkit](https://github.com/niffyhunt/wraithwall-toolkit) |
+| [RavenScan](https://github.com/niffyhunt/wraithwall/tree/main/packages/ravenscan) | Engineering-intelligence audits for codebases | [Read the package](https://pypi.org/project/ravenscan/) |
+| [Canary Kit](https://pypi.org/project/canary-kit/) | Minting and detecting supply-chain canary tokens | [PyPI](https://pypi.org/project/canary-kit/) |
+| [Honeypot MITRE](https://pypi.org/project/honeypot-mitre/) | Turning Cowrie logs into ATT&CK mappings and deterministic scores | [PyPI](https://pypi.org/project/honeypot-mitre/) |
+| [DML Spec](https://pypi.org/project/dml-spec/) | Signed, versioned deception configuration | [PyPI](https://pypi.org/project/dml-spec/) |
+| [WraithMesh](https://pypi.org/project/wraithmesh/) | Propagating signed observations across sensors | [PyPI](https://pypi.org/project/wraithmesh/) |
+| [Raven Guard](https://pypi.org/project/raven-guard/) | Security analysis while code is being written | [Codeguard source](https://github.com/niffyhunt/Codeguard-copilot) |
 
-WraithWall, the toolkit, BGP-monitor and `ravenscan` are MIT; the remaining projects carry their terms on their repositories.
+The toolkit packages are designed to stand alone. They do not require Flask, a platform database, or the full WraithWall deployment.
 
----
+## Other systems I run and build
 
-## ⊳ CURRENTLY
+### [BGP Monitor](https://github.com/niffyhunt/BGP-monitor)
 
-```text
-wraithwall          v0.2.1 — platform iteration continues
-wraithwall-toolkit  four deception packages maintained on PyPI
-restverify          v0.3.1 released 2026-09-30
-```
+Watches the global routing table through RIPE RIS Live, with optional Cloudflare Radar context, and learns a baseline for prefixes so origin-AS changes, unauthorized announcements, and route anomalies become visible.
 
-Plus whatever the honeypots teach me next — write-ups land on the blog.
+### [Codeguard Copilot](https://github.com/niffyhunt/Codeguard-copilot)
 
----
+Editor-time security analysis with deterministic multi-language patterns, CWE references, optional AI analysis, a CLI, and a VS Code extension. The CLI is published as [`raven-guard`](https://pypi.org/project/raven-guard/).
 
-## ⊳ WRITING
+### [My Mini Cloud](https://github.com/niffyhunt/my-mini-cloud)
 
-Field notes from running the platform — **[Technical Blog →](https://wraithwall.online/blog)**
+A self-hosted Git-to-URL deployment platform for personal services, static sites, and experimental applications, with Docker isolation and a simple dashboard.
 
-[![Read the field notes](https://img.shields.io/badge/Read_the_field_notes-444444?style=flat-square)](https://wraithwall.online/blog)
+## Released packages
+
+| Package | Current public purpose | Registry |
+|---|---|---|
+| `wraithwall` | Self-hosted deception and threat intelligence | [PyPI](https://pypi.org/project/wraithwall/) |
+| `restverify` | Restore verification for restic | [PyPI](https://pypi.org/project/restverify/) |
+| `ravenscan` | Codebase intelligence CLI | [PyPI](https://pypi.org/project/ravenscan/) |
+| `raven-guard` | Security analysis engine | [PyPI](https://pypi.org/project/raven-guard/) |
+| `wraithmesh` | Distributed signed-observation mesh | [PyPI](https://pypi.org/project/wraithmesh/) |
+| `canary-kit` | Supply-chain canary tokens | [PyPI](https://pypi.org/project/canary-kit/) |
+| `honeypot-mitre` | Cowrie-to-ATT&CK analysis | [PyPI](https://pypi.org/project/honeypot-mitre/) |
+| `dml-spec` | Signed deception configuration | [PyPI](https://pypi.org/project/dml-spec/) |
+
+## Field notes
+
+I write about the systems while they are running: what hostile traffic reveals, how campaigns connect, where a design fails under pressure, and what changes after the audit.
 
 - [72 Hours, 3 Botnets: DeFi Validator Sprayer, Tencent Scanner, and X-UI Hunter Caught Live](https://wraithwall.online/blog/72-hours-of-ssh-attacks-3-botnets-exposed)
 - [HUNTER-RECON: Dissecting an Automated Botnet Scanner Caught in Production](https://wraithwall.online/blog/hunter-recon-botnet-scanner-analysis)
@@ -234,37 +124,18 @@ Field notes from running the platform — **[Technical Blog →](https://wraithw
 - [Eighteen Months Running a Deception Platform Solo: What the Audit Found](https://wraithwall.online/blog/solo-deception-platform-audit)
 - [I Open-Sourced My Deception Toolkit, BGP Hijack Monitor Included](https://wraithwall.online/blog/open-sourcing-the-wraithwall-toolkit)
 
----
+[![Read all field notes](https://img.shields.io/badge/Read_all_field_notes-2d7a3e?style=for-the-badge&logo=readme&logoColor=white)](https://wraithwall.online/blog)
 
-## ⊳ COLLABORATE
+## Collaborate
 
-If you run a honeypot, build detection tooling, or found something broken: open an issue or a PR on [wraithwall](https://github.com/niffyhunt/wraithwall) (its `CONTRIBUTING.md` and `SECURITY.md` say how). For a security issue, follow [wraithwall's SECURITY.md](https://github.com/niffyhunt/wraithwall/blob/main/SECURITY.md) or email [contact@wraithwall.online](mailto:contact@wraithwall.online) (subject: `Security disclosure`).
+If you run a honeypot, build detection tooling, find a bug, or have evidence that would improve the work, open an issue or pull request on [WraithWall](https://github.com/niffyhunt/wraithwall). For a security issue, follow [WraithWall's SECURITY.md](https://github.com/niffyhunt/wraithwall/blob/main/SECURITY.md) or email [contact@wraithwall.online](mailto:contact@wraithwall.online) with the subject `Security disclosure`.
 
-```text
-especially useful:
-· Cowrie session samples with novel commands or tooling
-· HASSH/JA3 fingerprints from observed attacker clients
-· MITRE ATT&CK mapping suggestions for command patterns
-· bug reports with reproduction steps
-```
-
----
-
-## ⊳ CONTACT
+Useful contributions include novel Cowrie session samples, HASSH or JA3 fingerprints, MITRE ATT&CK mapping suggestions, reproducible bug reports, and documentation improvements.
 
 <div align="center">
 
-[![Website](https://img.shields.io/badge/wraithwall.online-CC0000?style=flat-square)](https://wraithwall.online)
-[![Blog](https://img.shields.io/badge/Blog-444444?style=flat-square)](https://wraithwall.online/blog)
-[![X](https://img.shields.io/badge/@Niffy__hunt-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/Niffy_hunt)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adewale-babalola-b85795395?utm_source=share_via&utm_content=profile&utm_medium=member_ios)
-[![Email](https://img.shields.io/badge/Email-333333?style=flat-square&logo=gmail&logoColor=white)](mailto:admin@wraithwall.online)
-[![Site](https://img.shields.io/badge/niffyhunt.online-555555?style=flat-square)](https://niffyhunt.online)
+[![Website](https://img.shields.io/badge/wraithwall.online-cc0000?style=for-the-badge)](https://wraithwall.online) [![Blog](https://img.shields.io/badge/Blog-444444?style=for-the-badge)](https://wraithwall.online/blog) [![X](https://img.shields.io/badge/@Niffy__hunt-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/Niffy_hunt) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adewale-babalola-b85795395?utm_source=share_via&utm_content=profile&utm_medium=member_ios) [![Email](https://img.shields.io/badge/Email-333333?style=for-the-badge&logo=gmail&logoColor=white)](mailto:admin@wraithwall.online) [![Personal site](https://img.shields.io/badge/niffyhunt.online-555555?style=for-the-badge)](https://niffyhunt.online)
 
-<br>
-
-```text
-built in the open · wraithwall.online
-```
+`built in the open · run on infrastructure I operate`
 
 </div>
