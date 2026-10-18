@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/profile-hero-v2.svg" alt="Dimensional systems map showing hostile signals entering a workshop, becoming evidence, and leaving as WraithWall, restverify, and open-source tools.">
+<img src="./assets/profile-hero.svg" alt="Dimensional systems map showing hostile signals entering a workshop, becoming evidence, and leaving as WraithWall, restverify, and open-source tools.">
 
 # Adewale Babalola
 
